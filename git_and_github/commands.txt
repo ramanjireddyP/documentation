@@ -1,0 +1,61 @@
+git init --->to initilaze working directory into git version control system by adding .git file to it .
+  git init
+
+git clone ----> to copy an exixing remote repository to locally.
+   git clone <url of repository>
+
+git status --> show current state of repository 
+   git status 
+       modified files
+       staged files
+       untracked and current branch 
+git log 
+    to show commit history 
+
+git diff 
+    show differnt between versions 
+    git diff --> diference between last commit and current 
+    git diff branch name--> between branches 
+    git diff commit1 commit2
+git add 
+    to add files to staging area 
+
+git commit 
+    to commit changes to take a snap shot 
+    git commit -m "message "
+    git commit -a -m "message"
+
+git remote -v --> remote name and url 
+
+git remote add origin <repo url>
+    to add files  local to remote 
+
+git push origin main 
+    to push files local to remote 
+
+git fetch --> to fetch remote changes to locally
+
+git merge --> to merge change locally 
+
+git pull --> git fetch + git merge 
+
+git branch --> show branches
+
+git branch new-branch --> new branch 
+
+git branch -d branchname --> to delete branch 
+
+git switch branchname --> to change branch 
+
+git reset --> to last commit  
+
+git revert  commit id --> to the commit id 
+
+
+
+
+
+
+
+
+       
