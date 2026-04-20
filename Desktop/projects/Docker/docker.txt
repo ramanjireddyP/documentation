@@ -1,0 +1,88 @@
+what is Docker ?
+    Docker is contenerization platform used to wrap depeneciees and code into a container so it can run any type of environment or any machine .
+
+what is image ?
+    image is read only templeate with instruction for creating a container 
+
+what is container?
+    a running instance of an image is called container 
+
+what is docker engine why we need it ?
+    is a client server aplication 
+    it consiist of three layers deamon,api and cli.
+    it manages images and containers 
+
+what is docker file ?
+    docer file is script or command to create a docker image for code or application 
+
+diff from vm ?
+    vm has own os and its large and slow 
+    docker runs on host os small and fast 
+
+Docker commands 
+build phase :
+docker build -t <name> . → Build an image from a Dockerfile in the current directory.
+
+docker images → List all locally stored images.
+
+docker rmi <image_id> → Remove a specific image.
+
+docker tag <source> <target> → Create a tag (alias) for an image (e.g., for versioning)
+
+Run phase:
+
+docker run <image> → Create and start a container.
+
+docker run -d <image> → Run container in Detached mode (background).
+
+docker run -p 80:8080 <image> → Map host port 80 to container port 8080.
+
+docker run --name <name> <image> → Give your container a specific name.
+
+-->docker run -v /host/path:/container/path <image> → Mount a Volume (persist data).
+
+inspect phase : 
+
+docker ps → List all running containers.
+
+docker ps -a → List all containers (including stopped ones).
+
+docker logs <container> → View the output/logs of a container.
+
+docker inspect <container> → View detailed JSON metadata (IP address, config).
+
+docker stats → View live resource usage (CPU, Memory).
+
+
+execution phase 
+
+docker exec -it <container> bash → Open an interactive terminal inside a running container.
+
+docker cp <file> <container>:/path → Copy a file from your computer into a container.
+
+docker stop <container> → Gracefully stop a container.
+
+docker start <container> → Start a previously stopped container.
+
+docker restart <container> → Stop and then start a container.
+
+
+clean up phase 
+
+docker rm <container> → Delete a stopped container.
+
+docker rm -f <container> → Force-delete a running container.
+
+docker system prune → The Big Clean: Deletes all stopped containers and unused networks.
+
+docker image prune → Deletes only "dangling" (unused) images.
+
+
+The Registry Phase (Docker Hub)
+
+
+docker login → Authenticate with Docker Hub.
+
+docker pull <image> → Download an image from the cloud.
+
+docker push <image> → Upload your image to the cloud.
