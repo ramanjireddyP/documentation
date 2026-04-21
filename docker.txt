@@ -86,3 +86,18 @@ docker login → Authenticate with Docker Hub.
 docker pull <image> → Download an image from the cloud.
 
 docker push <image> → Upload your image to the cloud.
+
+
+how to create image using dockerfile ??
+     
+# 1. Base image (Python installed already)
+FROM python:3.10
+
+# 2. Set working directory inside container
+WORKDIR /app
+
+# 3. Copy files from your system → container
+COPY . .
+
+# 4. Run the Python file
+CMD ["python", "app.py"]
